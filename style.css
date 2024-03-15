@@ -1,0 +1,238 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    list-style: none;
+}
+/* faz com que as imagens fiquem responsivas*/
+img{
+    display: block;
+    width: 100%;
+}
+body{
+    background-color: #14213d;
+    color: #222;
+   
+}
+
+
+
+header{
+    background-color: #fca311;
+ 
+}
+
+
+.menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu li a {
+    padding: 10px;
+    display: block;
+    margin-right: 10px;
+    color: #222;
+    text-decoration: none;
+    font-family: "MontSerrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+    
+}
+.menu li a:hover{
+cursor: pointer;
+color: #f2f2f2;
+animation: 0.6s;
+text-decoration: underline;
+}
+.grid{
+    display: grid;
+    width: 100%;
+   box-sizing: border-box;
+   grid-template-columns:  300px 1fr; 
+   margin-bottom: 4rem;
+}
+
+h1{
+    font-family: "Nunito sans", sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: #fca311;
+    font-style: italic;
+    margin-top: 50px;
+}
+
+
+.cursosDescricao{
+    margin-left: 50px;
+    margin-right: 200px;
+}
+
+.cursosDescricao p{
+
+    font-family: "MontSerrat", sans-serif;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: #f2f2f2;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.cursosDescricao h2{
+
+    font-family: "Nunito sans", sans-serif;
+    font-size: 1.5rem;
+     color:#fca311;
+}
+
+.cursosDescricao h2::before{
+    content: '';
+    width: 40px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #fca311;
+}
+
+.cursosImagem img {
+    height: 250px;
+}
+.cursosImagem{
+    margin-left: 50px;
+    height: 300px;
+    overflow-y: scroll;
+    cursor: pointer;
+}
+
+.cursosImagem::-webkit-scrollbar{
+    width: 15px;
+}
+.cursosImagem::-webkit-scrollbar-thumb{
+    background-color: #fca311;
+}
+.grid2{
+  display: grid;
+  grid-template-columns: minmax(300px, 700px);
+  grid-column-start: 2; 
+  grid-column-end: 5;
+  padding-left: 50px;
+  margin-top: 50px;
+ 
+}
+
+.estilofaq{
+font-family: 'MontSerrat', sans-serif;
+font-size: 20px;
+color: #f2f2f2;
+display: block;
+width: 100%;
+padding: 20px;
+}
+
+ dt{
+   color: #fca311;
+    font-family: "Nunito sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}
+ dd{
+    color: #f2f2f2;
+     margin-bottom: 10px;
+     padding: 10px;
+     text-align: justify;
+     
+}
+
+.grid3{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+.contatoh2 {
+    margin-top: 50px;
+    color: #f2f2f2;
+     font-family: "Nunito sans", sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+ 
+}
+
+.contatoli {
+   
+    font-family: "MontSerrat", sans-serif;
+    color: #f2f2f2;
+    font-style: italic;
+    padding: 10px;
+
+   
+}
+
+.grid .contato li::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background-color: #fca311;
+    margin-right: 10px;
+}
+
+@media (max-width:700px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+
+   .grid2{
+  display: grid;
+  grid-template-columns: minmax(300px,450px);
+  grid-column-start: 1; 
+  grid-column-end: 2;
+  padding-left: 10px;
+  margin-top: 10px;
+ 
+}
+}
+
+.cursosDescricao{
+    display: none;
+}
+
+.cursosDescricao.ativo{
+    display: block;
+    animation: show 1s forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px, 0px, 0px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+
+.javascriptAccordion dd{
+    display: none;
+}
+
+.javascriptAccordion dd.ativo{
+    display: block;
+    animation: show 1s forwards;
+}
